@@ -6,7 +6,7 @@ CREATE TABLE User (
     creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Order (
+CREATE TABLE Order_List (
     order_id INT PRIMARY KEY,
     user_id INT,
     total_order DECIMAL(10, 2),
@@ -26,6 +26,6 @@ CREATE TABLE Order_Products (
     product_id INT,
     quantity INT,
     PRIMARY KEY (order_id, product_id),
-    FOREIGN KEY (order_id) REFERENCES Order(order_id),
+    FOREIGN KEY (order_id) REFERENCES Order_List(order_id),
     FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
