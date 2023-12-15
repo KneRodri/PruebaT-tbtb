@@ -1,0 +1,17 @@
+body {
+    background-color: #1c1b1b;
+    color: #FFFFFF;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#searchInput {
+    width: 50%;
+}
