@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    let data;
+
     fetch('https://jsonplaceholder.typicode.com/users')
        .then(res => {
             if (!res.ok) {
@@ -6,22 +8,23 @@ document.addEventListener("DOMContentLoaded", () => {
             } 
             return res.json();
        })
-       .then(data => {
+       .then(users => {
+            data = users;
             fillTable(data);
        })
        .catch(err => {
         console.error('There was a problem with the app:', err);
        });
 
-    const fillTable = (filteredData) => {
-        const tableBody = document.querySelector('#myTable tbody');
-        const searchInput = document.getElementById('#searchInput');
+    const fillTable = (users) => {
+        const tBody = document.querySelector('#myTable tbody');
+        const searchInput = document.getElementById('searchInput');
 
         const renderTable = (filteredData) => {
-            tableBody.innerHTML = '';
+            tBody.innerHTML = '';
 
             filteredData.forEach(user => {
-                const row = tableBody.insertRow();
+                const row = tBody.insertRow();
                 row.innerHTML = `
                     <td>${user.id}</td>
                     <td>${user.name}</td
@@ -34,24 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
             });
         }
-        renderTable(filteredData);
+        renderTable(users);
 
         searchInput.addEventListener('keyup', () => {
-            const searchItem = searchInput.value;
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
             const filteredData = data.filter(user => {
-                const userData = `${user.name} ${user.email} ${user.address.city}`;
-                return userData.includes(searchItem);
+                const userData = `${user.name} ${user.email} ${user.address.city}`.toLowerCase();
+                return userData.includes(searchTerm);
             });
     
-        renderTable(filteredData);
-    });
+            renderTable(filteredData);
+        });
     }
 });
-
-// const fillTable = (data) => {
-//     const tableBody = document.querySelector('#myTable tbody');
-
-//     data.forEach(user => {
-
-//     });
-//     $('#myTable').DataTable();
