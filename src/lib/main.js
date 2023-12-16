@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
             filteredData.forEach(user => {
                 const row = tBody.insertRow();
                 row.innerHTML = `
-                    <td>${user.id}</td>
-                    <td>${user.name}</td
-                    <td>${user.username}</td>
-                    <td>${user.email}<td>
-                    <td>${user.address.city}, ${user.address.street}, ${user.address.suite}</td>
-                    <td>${user.phone}</td>
-                    <td>${user.website}</td>
-                    <td>${user.company.name}</td>
+                    <td class="col hidden-xs hidden-sm">${user.id}</td>
+                    <td class="col name">${user.name}</td
+                    <td class="col hidden-xs hidden-sm">${user.username}</td>
+                    <td class="col hidden-xs hidden-sm">${user.email}<td>
+                    <td class="col hidden-xs hidden-sm">${user.address.city}, ${user.address.street}, ${user.address.suite}</td>
+                    <td class="col hidden-xs hidden-sm">${user.phone}</td>
+                    <td class="col hidden-xs hidden-sm">${user.website}</td>
+                    <td class="col hidden-xs hidden-sm hide">${user.company.name}</td>
                 `;
             });
         }
