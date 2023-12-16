@@ -25,18 +25,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
             filteredData.forEach(user => {
                 const row = tBody.insertRow();
-                row.innerHTML = `
-                    <td class="col hidden-xs hidden-sm">${user.id}</td>
-                    <td class="col name">${user.name}</td
-                    <td class="col hidden-xs hidden-sm">${user.username}</td>
-                    <td class="col hidden-xs hidden-sm">${user.email}<td>
-                    <td class="col hidden-xs hidden-sm">${user.address.city}, ${user.address.street}, ${user.address.suite}</td>
-                    <td class="col hidden-xs hidden-sm">${user.phone}</td>
-                    <td class="col hidden-xs hidden-sm">${user.website}</td>
-                    <td class="col hidden-xs hidden-sm hide">${user.company.name}</td>
-                `;
-            });
-        }
+
+                const idCell = row.insertCell();
+                const nameCell = row.insertCell();
+                const usernameCell = row.insertCell();
+                const emailCell = row.insertCell();
+                const addressCell = row.insertCell();
+                const phoneCell = row.insertCell();
+                const websiteCell = row.insertCell();
+                const companyCell = row.insertCell();
+
+                idCell.textContent = user.id;
+                nameCell.textContent = user.name;
+                usernameCell.textContent = user.username;
+                emailCell.textContent = user.email;
+                addressCell.textContent = `${user.address.city}, ${user.address.street}, ${user.address.suite}`;
+                phoneCell.textContent = user.phone;
+                websiteCell.textContent = user.website;
+                companyCell.textContent = user.company.name;
+
+                idCell.classList.add('col');
+                nameCell.classList.add('col', 'name');
+                usernameCell.classList.add('col');
+                emailCell.classList.add('col');
+                addressCell.classList.add('col');
+                phoneCell.classList.add('col');
+                websiteCell.classList.add('col');
+                companyCell.classList.add('col');
+    });
+};
         renderTable(users);
 
         searchInput.addEventListener('keyup', () => {
