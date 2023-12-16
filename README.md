@@ -1,3 +1,4 @@
+![Interfaz](tabla-usuario.png)
 # Pruebat-tbtb
 
 ## Descripción
@@ -39,12 +40,10 @@
     ```bash
     sqlite3 my_database.db < transaction.sql
     ```
-<!-- ![archivo-imagen](diagrama-prueba.pdf) -->
+<!-- ![diagrama](diagrama-prueba.pdf) -->
 
 ## Ejecución de la App
 
     ```bash
     npm start
     ```
-
-## 
