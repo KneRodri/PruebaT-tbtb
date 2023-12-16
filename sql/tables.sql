@@ -21,7 +21,6 @@ CREATE TABLE TbProducts (
     price DECIMAL(8, 2) NOT NULL
 );
 
-/* Relación muchos a muchos entre 'Pedidos' y 'Productos' */
 CREATE TABLE TbOrderProducts (
     order_id INT,
     product_id INT,
