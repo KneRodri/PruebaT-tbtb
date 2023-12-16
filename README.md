@@ -39,7 +39,7 @@
     ```bash
     sqlite3 my_database.db < transaction.sql
     ```
-![archivo-imagen](thumb.png)
+![archivo-imagen](diagrama-prueba.pdf)
 
 ## Ejecución de la App
 
