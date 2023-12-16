@@ -1,4 +1,4 @@
-![Interfaz](tabla-usuario.png)
+![Interfaz](Tabla-usuario.png)
 # Pruebat-tbtb
 
 ## Descripción
