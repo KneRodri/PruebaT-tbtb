@@ -1,0 +1,54 @@
+@media screen and (max-width: 600px){
+    .container {
+        width: auto;
+    }
+    .table {
+        width: 100%;
+    }
+    .table th {
+        display: none;
+    }
+
+    .tabla td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .colCompany {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 412px) {
+
+    .container {
+        width: auto;
+    }
+    .table {
+        margin-right: 3rem;
+    }
+    .colWeb, th:last-child(2){
+        display: none;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 1200px) {
+  
+    .colCompany, th:nth-last-child(2){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+  
+    .container {
+        width: 100%;
+        height: 80%;
+    }
+    
+}

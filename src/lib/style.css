@@ -6,56 +6,49 @@ body {
 
 .container {
     background-color: #322d2d;
-    width: 87vw;
-    height: 80vh;
+    width: 75vw;
+    height: 90vh;
     margin: 3rem auto;
-    border-radius: 5px;
+    border-radius: .8rem;
+}
+
+.inputLabel{
+    display: flex;
+    padding: .8rem;
+}
+
+.formLabel {
+    margin-top: 0.8rem;
+    margin-left: 1.5rem;
 }
 
 .inputSearch {
     background-color: #322d2d;
-    width: 10rem;
     border: 1px solid #918c8c;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: .3rem;
     color: #FFFFFF;
-    margin: 1rem;
+    margin-top: .6rem;
+    margin-left: .2rem;
 }
 
 .table {
-    width: 100%;
+    width: calc(100% - 40px);
     border-collapse: collapse;
-    margin-top: 0.5rem;
+    margin: auto;
+    box-sizing: border;
 }
 
 .table th {
+    background-color: #322d2d;
     padding: 0.8rem;
     text-align: left;
+    border-bottom: 1px solid #918c8c;
 }
 
 .table td {
     background-color: #2b2727;
     padding: 1rem;
     text-align: left;
-    border: 1px solid #2b2222;
-}
-
-
-@media (max-width: 200px) {
-    .hidden-xs {
-        display: none;
-    }
-}
-
-
-/* @media (min-width: 768px) and (max-width: 991px) {
-    .hidden-sm {
-        display: none;
-    }
-} */
-
-@media (max-width: 704px) {
-    .hidden-company {
-        display: none;
-    }
+    border-bottom: 1px solid #5c5757;
 }
