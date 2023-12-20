@@ -2,9 +2,9 @@
   "name": "pruebat-tbtb",
   "version": "1.0.0",
   "description": "prueba técnica para vacante",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "npx serve src/lib"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "serve": "^14.2.1"
   }
 }

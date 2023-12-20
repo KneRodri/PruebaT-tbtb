@@ -6,7 +6,7 @@ const port = process.env.PORT || 8000;
 
 app.use(express.json());
 
-const db = new sqilite3.Database('my_database.db');
+// const db = new sqilite3.Database('my_database.db');
 
 app.get('/user', (req, res) => {
     const userData = {
