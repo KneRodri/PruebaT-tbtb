@@ -37,5 +37,53 @@ INSERT INTO TbOrderProducts (order_id, product_id, quantity) VALUES
 (107, 505, 1),
 (108, 506, 2);
 
+SELECT * FROM tborderproducts;
+
+UPDATE tbproducts SET name_product = 'Producto G' WHERE product_id = 501;
+
+DELETE FROM tborderproducts WHERE order_id = 101;
+
+SELECT
+U.user_name,
+OL.total_order,
+P.name_product
+FROM
+tborderlist OL
+INNER JOIN
+tbuser U ON Ol.user_id = U.user_id
+INNER JOIN
+tborderproducts OP ON Ol.order_id = OP.order_id
+INNER JOIN
+tbproducts P ON OP.product_id = P.product_id;
+
+SELECT 
+U.user_name,
+OL.order_id,
+OL.total_order,
+P.name_product
+FROM
+tbuser U 
+LEFT JOIN
+tborderlist OL ON U.user_id = OL.user_id
+LEFT JOIN
+tborderproducts OP ON OL.order_id = OP.order_id
+LEFT JOIN
+tbproducts P ON OP.product_id = P.product_id;
+
+SELECT user_name FROM tbuser
+UNION 
+SELECT product_id FROM tbproducts;
+
+SELECT
+	order_id,
+    total_order,
+    CASE
+		WHEN total_order <= 50.00 THEN 'Pedido Económico'
+        WHEN total_order > 50.00 AND total_order <= 100.00 THEN 'Pedido regular'
+        WHEN total_order > 100.00 THEN 'Pedido Premiun'
+        ELSE 'Sin clasificación'
+	END AS order_classification
+FROM
+	tborderlist;
 
 
