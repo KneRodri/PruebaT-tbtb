@@ -26,8 +26,7 @@
     ```bash
     npm install
     ```
-
-## Configuración de la Base de Datos
+<!-- ## Configuración de la Base de Datos
 
 1. Ejecuta el script `table.sql` para crear las tablas:
    
@@ -39,7 +38,7 @@
    
     ```bash
     sqlite3 my_database.db < transaction.sql
-    ```
+    ``` -->
 <!-- ![diagrama](diagrama-prueba.pdf) -->
 
 ## Ejecución de la App
